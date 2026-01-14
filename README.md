@@ -17,10 +17,6 @@ The system consists of two main modules:
 * **2x AAA Battery Packs** with batteries
 * **Double-sided adhesive tape** (for mounting the transmitter unit)
 
-### Hardware Components:
-![Micro:bit Board](https://github.com/user-attachments/assets/61eb9445-9036-4901-841f-49b7228bf66d)
-
-![Complete Kit](https://github.com/user-attachments/assets/74337582-3ccb-4b30-bf79-4d761f04ee2f)
 
 ## 💻 Software & Environment
 * **Microsoft MakeCode:** Online Block/JavaScript Editor.
@@ -29,8 +25,8 @@ The system consists of two main modules:
 ## 🚀 Setup and Build
 1.  Open [MakeCode for micro:bit](https://makecode.microbit.org/).
 2.  Import the source code files:
-    * `transmitter.py` (for the door-mounted unit).
-    * `receiver.py` (for the remote user unit).
+    * `proiectplaca1` (for the door-mounted unit).
+    * `proiectplaca2` (for the remote user unit).
 3.  Flash the generated `.hex` files onto the respective micro:bit boards via USB.
 4.  Mount the **Transmitter** to the door frame/surface using double-sided adhesive tape.
 5.  Power both units; they will automatically sync on the pre-defined radio group.

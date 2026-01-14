@@ -1,0 +1,29 @@
+radio.setGroup(17)
+
+let lastX = input.acceleration(Dimension.X)
+let lastY = input.acceleration(Dimension.Y)
+let lastZ = input.acceleration(Dimension.Z)
+
+basic.forever(function () {
+    let deltaX = Math.abs(input.acceleration(Dimension.X) - lastX)
+    let deltaY = Math.abs(input.acceleration(Dimension.Y) - lastY)
+    let deltaZ = Math.abs(input.acceleration(Dimension.Z) - lastZ)
+
+    if (deltaX > 300 || deltaY > 300 || deltaZ > 300) {  // Prag redus pentru sensibilitate mare
+        basic.showIcon(IconNames.No)
+        radio.sendString("open")
+        basic.pause(2000)
+    }
+
+    lastX = input.acceleration(Dimension.X)
+    lastY = input.acceleration(Dimension.Y)
+    lastZ = input.acceleration(Dimension.Z)
+})
+
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "closed") {
+        basic.showIcon(IconNames.Yes)
+        basic.pause(3000)
+        basic.clearScreen()
+    }
+})

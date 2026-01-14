@@ -1,0 +1,14 @@
+radio.setGroup(17)
+
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "open") {
+        basic.showIcon(IconNames.No)
+    } else if (receivedString == "closed") {
+        basic.showIcon(IconNames.Yes)
+    }
+})
+
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("closed")
+    basic.showIcon(IconNames.Yes)
+})
